@@ -3,10 +3,17 @@ module.exports = {
     browser: true,
     es2021: true,
   },
+  settings: {
+    jest: { version: 26 },
+  },
   extends: [
     'plugin:react/recommended',
     'airbnb',
     'plugin:cypress/recommended',
+    'plugin:jest/recommended',
+    'plugin:jest/style',
+    'react-app',
+    'react-app/jest',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -16,6 +23,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: [
+    'jest',
     'react',
     'cypress',
   ],

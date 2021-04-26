@@ -1,3 +1,4 @@
+/* eslint-disable jest/expect-expect */
 describe('home page', () => {
   beforeEach(() => {
     cy.visit('/');
@@ -8,6 +9,6 @@ describe('home page', () => {
   });
 
   it('should render a list of books on the home page', () => {
-
+    cy.findByRole('list').should('exist');
   });
 });
