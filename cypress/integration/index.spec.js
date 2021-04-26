@@ -1,6 +1,23 @@
 /* eslint-disable jest/expect-expect */
 describe('home page', () => {
   beforeEach(() => {
+    // cy.intercept('http://localhost:3001/api/books',
+    //   {
+    //     statusCode: 200,
+    //     body: [
+    //       { title: 'Wuthering Heights' },
+    //       { title: 'Great Gatsby' },
+    //       { title: 'East of Eden' },
+    //       { title: 'The Count of Monte Cristo' },
+    //       { title: 'Hyperion' },
+    //       { title: 'The Gunslinger' },
+    //       { title: 'Beowulf' },
+    //       { title: 'Unofficial Pokedex Guide Sixth Edition' },
+    //       { title: 'Lord of the Rings' },
+    //       { title: 'Eat Pray Love' },
+    //     ],
+    //   });
+
     cy.visit('/');
   });
 
