@@ -10,5 +10,6 @@ describe('home page', () => {
 
   it('should render a list of books on the home page', () => {
     cy.findByRole('list').should('exist');
+    cy.findAllByRole('listitem').should('have.length', 10);
   });
 });

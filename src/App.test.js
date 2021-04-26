@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import App from './App';
 
 describe('app', () => {
-  beforeAll(() => {
+  beforeEach(() => {
     render(<App />);
   });
 
@@ -12,5 +12,7 @@ describe('app', () => {
 
   it('should render a list', () => {
     expect(screen.getByRole('list')).toBeInTheDocument();
+    const listItems = screen.getAllByRole('listitem');
+    expect(listItems).toHaveLength(10);
   });
 });
